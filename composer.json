@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Demostf\\Backup\\": "src/",
+      "Demostf\\Backup\\Test\\": "tests/"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^2.4"
+  }
+}
