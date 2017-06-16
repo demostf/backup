@@ -13,8 +13,8 @@ $statePath = getenv('STATE_FILE');
 
 
 if (file_exists($statePath)) {
-	$lastPage = intval(file_get_contents($statePath));
-	if (!$lastPage) {
+	$lastPage = intval(file_get_contents($statePath)) - 1;
+	if ($lastPage < 1) {
 		$lastPage = 1;
 	}
 } else {
