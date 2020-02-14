@@ -17,7 +17,10 @@ class Backup {
 	}
 
 	private function backupDemo(string $name, string $url, string $hash): bool {
-		$handle = fopen($url, 'r');
+        $encodedUrl = rawurlencode($url);
+        $encodedUrl = str_replace('%2F', '/', $encodedUrl);
+        $encodedUrl = str_replace('%3A//', '://', $encodedUrl);
+		$handle = fopen($encodedUrl, 'r');
 		$storedHash = $this->store->store($name, $handle);
 		return $hash === '' || $hash === $storedHash;
 	}
