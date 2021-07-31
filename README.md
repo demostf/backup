@@ -2,6 +2,8 @@
 
 Backup script for demos.
 
+## Deprecated, use [backup-rs](https://github.com/demostf/backup-rs) instead
+
 A simple script that incrementally backs up every demo file to a local directory.
 
 ## Usage
